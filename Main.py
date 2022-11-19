@@ -13,7 +13,7 @@ import datetime
 
 name_public = []
 name_users = []
-bot = telebot.TeleBot('5544156373:AAGTKM87LOZR3EcpwdzBtu0QMPOVl9Vktao')
+bot = telebot.TeleBot('TOKEN BOT')
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -71,7 +71,7 @@ def class_list_public(message):
 
         bot.send_message(message.chat.id, text="Список групп пуст")
      else: 
-        for f in os.listdir(r"C:\Users\constVova\Desktop\PythonTelegramBotListUsers"):
+        for f in os.listdir(r"JSON-File"):
          if fnmatch.fnmatch(f, '*.json'):
             replace_name = f.replace(".json", "")
             menu_button_list.add(types.KeyboardButton(replace_name))
